@@ -44,6 +44,7 @@
                 element.classList.remove('dark_mode');
             } else {
                 element.classList.add('dark_mode');
+                document.getElementById('light_mode').innerHTML = 'Switch to Light Mode';
             }
         }
         document.getElementById('background').addEventListener('click', changeBackground);
