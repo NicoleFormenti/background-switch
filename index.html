@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkModeOn</title>
+    <style>
+        body    {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #light_mode {
+            width: 100px;
+            height: 50px;
+            border: 2px solid greenyellow;
+        }
+        #background.dark_mode   {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body id="background">
+    <div id="image_container">
+        <img src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="snow photo" width="200px" height="150px">
+    </div>
+    <div id="text-container">
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Temporibus obcaecati aperiam, non dicta repudiandae voluptates? <br> Tempore perferendis, consequuntur officiis inventore at ratione culpa ab omnis. <br> Natus necessitatibus mollitia dolor minima.</p>
+    </div>
+    <div id="light_mode">
+        Switch to Dark Mode
+    </div>
+
+    <script>
+        // background and text color need to change once we click on the light_mode div
+        const element = document.getElementById('background');
+
+        function changeBackground() {
+            if(element.classList.contains('dark_mode')) {
+                element.classList.remove('dark_mode');
+            } else {
+                element.classList.add('dark_mode');
+            }
+        }
+        document.getElementById('background').addEventListener('click', changeBackground);
+        
+    </script>
+</body>
+</html>
