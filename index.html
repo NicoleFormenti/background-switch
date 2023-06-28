@@ -36,19 +36,23 @@
     </div>
 
     <script>
-        // background and text color need to change once we click on the light_mode div
         const element = document.getElementById('background');
+        const image = document.getElementById('image1');
 
         function changeBackground() {
             if(element.classList.contains('dark_mode')) {
                 element.classList.remove('dark_mode');
+                document.getElementById('light_mode').innerHTML = 'Switch to Dark Mode';
+                image.src = 'https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"';
             } else {
                 element.classList.add('dark_mode');
                 document.getElementById('light_mode').innerHTML = 'Switch to Light Mode';
+                image.src = 'https://images.unsplash.com/photo-1619266465172-02a857c3556d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dm9sY2Fub3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60';
             }
         }
         document.getElementById('background').addEventListener('click', changeBackground);
-        
+        // if light mode: snow pic - default     
+        // if dark mode: volcano pic
     </script>
 </body>
 </html>
